@@ -6,7 +6,7 @@ import React from "react";
 const Experience = () => {
   return (
     <div className=" min-h-screen text-white p-8 md:pl-40 flex flex-col md:flex-row items-center justify-between">
-      <div className="md:w-[30%] mb-8 md:mb-0">
+      <div className="w-full md:w-[30%] mb-6 md:mb-0">
         <h1 className="text-3xl md:text-5xl font-primaryFont mb-4">
           Curate your experience as you like
         </h1>
@@ -25,7 +25,7 @@ const Experience = () => {
         </Button>
       </div>
 
-      <div className="md:w-[70%] ">
+      <div className="w-full md:w-[70%]">
         <Carousel />
       </div>
     </div>
