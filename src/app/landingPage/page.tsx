@@ -1,6 +1,7 @@
 "use client";
 import Navbar from "@/components/navbar";
-import { ChevronRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, ChevronRight, ChevronRightIcon } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 const slides = [
@@ -46,41 +47,39 @@ const LandingPage = () => {
         <Navbar />
 
         <div className="flex-grow grid grid-cols-1 md:grid-cols-2">
-          <div className="relative flex justify-center items-center text-left overflow-hidden">
+          <div className="relative flex justify-center items-start text-left overflow-hidden">
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className={`absolute inset-0 transition-opacity  duration-1000 flex justify-center items-center ${
+                className={`absolute inset-0 transition-opacity duration-1000 flex justify-center items-center ${
                   index === currentSlide ? "opacity-100" : "opacity-0"
                 }`}
               >
                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-                <div className="relative z-10 flex flex-col items-center text-center text-white px-8">
+                <div className="relative z-10 flex flex-col  items-start text-left text-white px-20">
                   <p>KHAWAJA YANNI</p>
                   <h1 className="text-4xl md:text-6xl font-bold mt-4 mb-4">
                     {slide.title}
                   </h1>
                   <p className="text-lg md:text-md mb-8">{slide.subtitle}</p>
-                  <button
+                  <Button
                     style={{
                       border: "none",
-                      borderRadius: "16px",
-                      width: "299px",
-                      height: "55px",
+                      borderRadius: "16px", 
                       textAlign: "center",
                       background:
                         "linear-gradient(180deg, rgba(173,135,73,1) 0%, rgba(220,187,117,1) 70%)",
                     }}
-                    className="py-2 px-6 rounded-full inline-flex items-center space-x-2 hover:bg-opacity-90 transition-colors w-fit"
+                    className="py-2 px-6 w-[279px] h-[52px] md:w-[299px] md:h-[55px] rounded-full inline-flex justify-between items-center space-x-2 hover:bg-opacity-90 transition-colors"
                   >
-                    <span>Book reservation now</span>
-                    <ChevronRight className="w-5 h-5" />
-                  </button>
+                    <span className="text-[16px]">Book reservation now</span>
+                    <ArrowRight className="w-6 h-6" />
+                  </Button>
                 </div>
               </div>
             ))}
 
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <div className="absolute bottom-4 right-2 transform -translate-x-1/2 flex space-x-2">
               {slides.map((_, index) => (
                 <button
                   key={index}

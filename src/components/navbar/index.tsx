@@ -52,28 +52,29 @@ export default function Navbar() {
             />
             <Button
               variant="outline"
-            //   className="text-gold border-gold hover:bg-gold hover:text-black rounded-[16px]"
+              //   className="text-gold border-gold hover:bg-gold hover:text-black rounded-[16px]"
               style={{
-                border:'none',
-                borderRadius:'16px',
-                width: '142px',
-                height: '48px',
-                background: "linear-gradient(180deg, rgba(173,135,73,1) 0%, rgba(220,187,117,1) 070%)",
+                border: "none",
+                borderRadius: "16px",
+                width: "142px",
+                height: "48px",
+                background:
+                  "linear-gradient(180deg, rgba(173,135,73,1) 0%, rgba(220,187,117,1) 070%)",
               }}
             >
               Log in
             </Button>
             <div className="relative">
               <Button variant="ghost" className="text-gold flex items-center">
+                <ChevronDown className="h-4 w-4" />
                 <Image
                   src="/assets/flag.png"
                   alt="England flag"
-                  width= {33}
+                  width={33}
                   height={22}
                   className="mr-2"
                 />
                 English
-                <ChevronDown className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
@@ -93,12 +94,12 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <div className="border-t border-b border-[#fff]/[0.60] ">
+
+      <div className="border-t border-b border-[#fff]/[0.60] hidden md:block">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-16">
-            <div className="hidden md:flex w-full items-center space-x-4">
+          <div className="flex justify-between h-12">
+            <div className="hidden md:flex md:justify-between w-full items-center space-x-4">
               {navItems.map((item) => (
-                // <div className="grid grid-cols-6 text-center " >
                 <Link
                   key={item.name}
                   href={item.href}
@@ -113,59 +114,98 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-green-900">
+        <div className="md:hidden fixed inset-0 bg-gradient-to-r from-[#283606] to-[#0f1500] z-50 flex flex-col justify-between">
+          <div className="p-4 flex justify-between items-center">
+            <Image
+              src="/assets/logo.png"
+              alt="The Groves Logo"
+              width={100}
+              height={40}
+              className="h-10 w-auto"
+            />
+            <button
+              onClick={toggleMenu}
+              type="button"
+              className="text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            >
+              <X className="block h-6 w-6" />
+            </button>
+          </div>
+          <div className="flex-grow overflow-y-auto mt-2 border-t border-[#fff]">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                className="text-white hover:bg-[#0D330D] block px-4 py-4 text-lg font-medium border-b border-[#fff]"
               >
                 {item.name}
               </Link>
             ))}
-            <div className="mt-4 flex items-center justify-center space-x-4">
-              <img
-                src="/assets/tiktok.png"
-                className="h-5 w-5 text-gray-400 mr-3"
+          {/* lang and button */}
+               <div className="relative mt-3">
+            <Button variant="ghost" className="text-gold flex items-center">
+              <ChevronDown className="h-4 w-4" />
+              <Image
+                src="/assets/flag.png"
+                alt="England flag"
+                width={33}
+                height={22}
+                className="mr-2 "
               />
-              <img
-                src="/assets/insta.png"
-                className="h-5 w-5 text-gray-400 mr-3"
+              English
+            </Button>
+          </div>
+          <div>
+          <Button
+            variant="outline"
+            style={{
+              border: "none",
+              borderRadius: "16px",
+              marginTop:10,
+              width: "142px",
+              height: "48px",
+              background:
+                "linear-gradient(180deg, rgba(173,135,73,1) 0%, rgba(220,187,117,1) 070%)",
+            }}
+          >
+            Log in
+          </Button>
+          </div>
+          </div>
+          {/* lang and button */}
+          {/* <div className="py-4 " >
+          <div className="relative mb-3">
+            <Button variant="ghost" className="text-gold flex items-center">
+              <ChevronDown className="h-4 w-4" />
+              <Image
+                src="/assets/flag.png"
+                alt="England flag"
+                width={33}
+                height={22}
+                className="mr-2 "
               />
-              <img
-                src="/assets/twitter x.png"
-                className="h-5 w-5 text-gray-400 mr-3"
-              />
-              <img
-                src="/assets/snapchat.png"
-                className="h-5 w-5 text-gray-400 mr-3"
-              />
-            </div>
-            <div className="mt-4">
-              <Button
-                variant="outline"
-                className="text-gold border-gold hover:bg-gold hover:text-black w-full"
-              >
-                Log in
-              </Button>
-            </div>
-            <div className="mt-4">
-              <Button
-                variant="ghost"
-                className="text-gold flex items-center justify-center w-full"
-              >
-                <Image
-                  src="/placeholder.svg"
-                  alt="England flag"
-                  width={20}
-                  height={15}
-                  className="mr-2"
-                />
-                English
-                <ChevronDown className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
+              English
+            </Button>
+          </div>
+          <Button
+            variant="outline"
+            style={{
+              border: "none",
+              borderRadius: "16px",
+              width: "142px",
+              height: "48px",
+              background:
+                "linear-gradient(180deg, rgba(173,135,73,1) 0%, rgba(220,187,117,1) 070%)",
+            }}
+          >
+            Log in
+          </Button>
+          </div> */}
+          <div className="flex items-center justify-start space-x-6 ml-4 mb-6">
+            <img src="/assets/tiktok.png" className="h-6 w-6" />
+            <img src="/assets/insta.png" className="h-6 w-6" />
+            <img src="/assets/twitter x.png" className="h-6 w-6" />
+            <img src="/assets/snapchat.png" className="h-6 w-6" />
           </div>
         </div>
       )}
