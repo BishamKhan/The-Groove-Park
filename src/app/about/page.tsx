@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Grid from "@mui/material/Grid2";
-import { ArrowRightIcon, PlayCircle } from "lucide-react";
+import { ArrowRightIcon, PlayCircle, PlayIcon } from "lucide-react";
 import React from "react";
 
 const About = () => {
@@ -24,7 +24,22 @@ const About = () => {
             className="w-full h-[400px] object-cover rounded-lg"
           />
           <div className="absolute inset-0 flex items-center justify-center">
-            <PlayCircle className="w-16 h-16 text-white opacity-80" />
+            <div
+              style={{
+                background: "#ffff",
+                color: "#242730",
+                padding: 1,
+                width: 60,
+                height: 60,
+                borderRadius: "50%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                cursor: "pointer",
+              }}
+            >
+              <PlayIcon className="text-gradient-to-r from-[#283606] to-[#0f1500]" />
+            </div>
           </div>
         </div>
         <div className="bg-[#2a3e1d] rounded-lg p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">

@@ -45,21 +45,25 @@ export default function Carousel() {
             },
             768: {
               slidesPerView: 3.5,
-              spaceBetween: 10,
+              spaceBetween: 20,
             },
             1024: {
               slidesPerView: 4.5,
-              spaceBetween: 10,
+              spaceBetween: 20,
             },
           }}
         >
           {carouselData.map((item, index) => (
             <>
               <SwiperSlide
-                className="!w-[228px] !h-[362px] flex flex-col items-center rounded-lg !bg-transparent"
+                className={`flex flex-col items-center rounded-lg !bg-transparent ${
+                  index % 2 === 0
+                    ? "md:!w-[300px] md:!h-[440px] !w-[228px] !h-[322px]"
+                    : "md:!w-[228px] md:!h-[322px] !w-[228px] !h-[322px]"
+                }`}
                 key={index}
               >
-                <div className="w-full h-[100%] relative overflow-hidden rounded-lg">
+                <div className="w-full h-[90%] relative overflow-hidden rounded-lg">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -67,7 +71,7 @@ export default function Carousel() {
                     objectFit="cover"
                   />
                 </div>
-                <h3 className="text-white font-primaryFont text-xl mt-2">
+                <h3 className="text-white font-primaryFont text-center text-xl mt-2">
                   {item.title}
                 </h3>
               </SwiperSlide>
