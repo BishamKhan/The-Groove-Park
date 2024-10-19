@@ -5,7 +5,7 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 
 function ParkMap() {
   return (
-    <div className="min-h-screen bg-[#1a2601] text-white">
+    <div className="min-h-screen text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="relative aspect-square w-full max-w-2xl mx-auto lg:mx-0 order-last xs:order-last lg:order-first">

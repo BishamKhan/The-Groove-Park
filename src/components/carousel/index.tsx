@@ -5,90 +5,85 @@ import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
 import { Card, CardContent } from "@/components/ui/card";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+import "./styles.css";
+
+// import required modules
+import { Pagination, Navigation  } from "swiper/modules";
+import Image from "next/image";
+
 const carouselData = [
   { title: "Little Krazy", image: "/assets/carousel1.png" },
   { title: "Hawanim Groves City", image: "/assets/carousel2.png" },
   { title: "Picnic Market", image: "/assets/carousel3.png" },
   { title: "Lucaw", image: "/assets/carousel4.png" },
-  { title: "Event Space", image: "/assets/carousel4.png" },
-  { title: "Outdoor Lounge", image: "/assets/carousel5.png" },
-  { title: "Night Club", image: "/assets/carousel6.png" },
-  { title: "Rooftop Bar", image: "/assets/carousel7.png" },
+  { title: "Event Space", image: "/assets/carousel5.png" },
+  { title: "Outdoor Lounge", image: "/assets/carousel6.png" },
+  { title: "Night Club", image: "/assets/carousel7.png" },
+  { title: "Rooftop Bar", image: "/assets/carousel2.png" },
 ];
 
 export default function Carousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel(
-    {
-      loop: true,
-      align: "start",
-      slidesToScroll: 1,
-    },
-    [WheelGesturesPlugin()]
-  );
-  const [selectedIndex, setSelectedIndex] = useState(0);
-
-  const scrollPrev = useCallback(
-    () => emblaApi && emblaApi.scrollPrev(),
-    [emblaApi]
-  );
-  const scrollNext = useCallback(
-    () => emblaApi && emblaApi.scrollNext(),
-    [emblaApi]
-  );
-
-  const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-    onSelect();
-    emblaApi.on("select", onSelect);
-    emblaApi.on("reInit", onSelect);
-  }, [emblaApi, onSelect]);
-
-  useEffect(() => {
-    if (emblaApi) {
-      const autoplay = setInterval(() => {
-        emblaApi.scrollNext();
-      }, 3000); // Change slide every 3 seconds
-
-      return () => clearInterval(autoplay);
-    }
-  }, [emblaApi]);
-
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 relative">
-      <div className="overflow-hidden" ref={emblaRef}>
-        <div className="flex">
-          {carouselData.map((item, index) => (
-            <div
-              key={index}
-              className="flex-[0_0_100%] md:flex-[0_0_25%] min-w-0 pl-4 first:pl-0"
-            >
-              <Card className="h-64 md:h-80 transition-all duration-300 border-none rounded-[16px] ">
-                <CardContent className="p-0 h-full relative overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                 
-                </CardContent>
-              </Card>
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                    <h3 className="text-lg font-semibold text-white">
-                      {item.title}
-                    </h3>
-                  </div>
-            </div>
-            
-          ))}
-        </div>
+     <>
+    <div className="w-full py-12 px-4">
+      <Swiper
+        slidesPerView={4}
+        spaceBetween={20}
+        // pagination={{
+        //   clickable: true,
+        // }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+        breakpoints={{
+          320: {
+            slidesPerView: 1, 
+            spaceBetween: 10,  
+          },
         
-      </div>
+          480: {
+            slidesPerView: 1.5, 
+            spaceBetween: 15, 
+          },
+          640: {
+            slidesPerView: 2.5,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3.5,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 4.5,
+            spaceBetween: 20,
+          },
+        }}
+      >
+        {carouselData.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className="w-full h-[526px] relative overflow-hidden rounded-lg">
+              <Image
+                src={item.image}
+                alt={item.title}
+                layout="fill"
+                objectFit="cover"
+                // className="transition-transform duration-300 ease-in-out hover:scale-110"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+                <h3 className="text-white text-xl font-bold">{item.title}</h3>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
+    </>
   );
 }

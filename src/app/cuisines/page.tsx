@@ -61,67 +61,6 @@ const Cuisine = () => {
         </Grid>
       </div>
     </div>
-    // <div className="py-20 px-60">
-    //   <Grid container spacing={2}>
-    //     <Grid
-    //       size={{ xs: 12 }}
-    //       sx={{
-    //         mt: 3,
-    //         display: "flex",
-    //         justifyContent: "center",
-    //         textAlign: "center",
-    //       }}
-    //     >
-    //       <div>
-    //         <p className="text-[32px] text-[#fff] ">
-    //           Experience The Finest Cuisine
-    //         </p>
-    //         <p className="text-[16px] text-[#fff] ">
-    //           {" "}
-    //           Lorem Ipsum is simply dummy text of the printing and typesetting
-    //           industry. Lorem Ipsum has been the industry's standard dummy text
-    //           ever since the 1500s, when an unknown printer took a galley of
-    //           type and scrambled it to make a type specimen book.
-    //         </p>
-    //       </div>
-    //     </Grid>
-    //   </Grid>
-
-    //   <Grid container spacing={2} sx={{ mt: 5 }}>
-    //     {
-    //         array.map((item)=> (
-    //             <Grid size={{ xs: 12, md: 4 }}>
-    //               <Card className="rounded-[12px] p-2 border-none text-[#fff] bg-[#fff]/[0.25] ">
-    //                 <CardContent>
-    //                     <div>
-    //                         <img src={item.img} />
-    //                     </div>
-    //                   <div className="flex justify-between items-center">
-    //                     <div>
-    //                       <p className="text-[28px]">{item.name}</p>
-    //                       <Badge
-    //                         style={{
-    //                           border: "none",
-    //                           borderRadius: "16px",
-    //                           background:
-    //                             "linear-gradient(180deg, rgba(173,135,73,1) 0%, rgba(220,187,117,1) 070%)",
-    //                         }}
-    //                         className="p-1 pl-3 pr-3"
-    //                       >
-    //                         {item.rate}
-    //                       </Badge>
-    //                     </div>
-    //                     <div>
-    //                       <ArrowRightIcon />
-    //                     </div>
-    //                   </div>
-    //                 </CardContent>
-    //               </Card>
-    //             </Grid>
-    //         ))
-    //     }
-    //   </Grid>
-    // </div>
   );
 };
 
