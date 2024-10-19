@@ -52,7 +52,7 @@ export default function Navbar() {
             />
             <Button
               variant="outline"
-              //   className="text-gold border-gold hover:bg-gold hover:text-black rounded-[16px]"
+                className="font-secondaryFont "
               style={{
                 border: "none",
                 borderRadius: "16px",
@@ -65,7 +65,7 @@ export default function Navbar() {
               Log in
             </Button>
             <div className="relative">
-              <Button variant="ghost" className="text-gold flex items-center">
+              <Button variant="ghost" className="font-secondaryFont  text-gold flex items-center">
                 <ChevronDown className="h-4 w-4" />
                 <Image
                   src="/assets/flag.png"
@@ -103,7 +103,7 @@ export default function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-secondaryFont  font-medium"
                 >
                   {item.name}
                 </Link>
@@ -136,14 +136,14 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-white hover:bg-[#0D330D] block px-4 py-4 text-lg font-medium border-b border-[#fff]"
+                className="text-white hover:bg-[#0D330D] block px-4 py-4 text-lg font-secondaryFont  font-medium border-b border-[#fff]"
               >
                 {item.name}
               </Link>
             ))}
           {/* lang and button */}
                <div className="relative mt-3">
-            <Button variant="ghost" className="text-gold flex items-center">
+            <Button variant="ghost" className=" font-secondaryFont text-gold flex items-center">
               <ChevronDown className="h-4 w-4" />
               <Image
                 src="/assets/flag.png"
@@ -158,6 +158,7 @@ export default function Navbar() {
           <div>
           <Button
             variant="outline"
+            className="font-secondaryFont "
             style={{
               border: "none",
               borderRadius: "16px",

@@ -16,7 +16,7 @@ const carouselData = [
   { title: "Rooftop Bar", image: "/assets/carousel7.png" },
 ];
 
-export default function Component() {
+export default function Carousel() {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     {
       loop: true,
@@ -89,20 +89,6 @@ export default function Component() {
         </div>
         
       </div>
-      {/* <button 
-        onClick={scrollPrev} 
-        className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 z-10"
-        aria-label="Previous slide"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
-      <button 
-        onClick={scrollNext} 
-        className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 z-10"
-        aria-label="Next slide"
-      >
-        <ChevronRight className="w-6 h-6" />
-      </button> */}
     </div>
   );
 }

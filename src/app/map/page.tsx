@@ -12,13 +12,13 @@ function ParkMap() {
             <img src="/assets/map.png" alt="Interactive map of The Groves" />
           </div>
           <div className="space-y-6 text-left">
-            <h2 className="text-lg font-semibold text-[#fff] uppercase tracking-wide">
+            <h2 className="text-md font-secondaryFont  text-[#fff] uppercase tracking-wide">
               Experience the groves
             </h2>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-primarFont leading-tight">
               Find your place
             </h1>
-            <p className="text-xl text-gray-300 max-w-md mx-auto lg:mx-0">
+            <p className="text-xl text-gray-300 max-w-md font-secondaryFont  mx-auto lg:mx-0">
               Our interactive map will show you the way to the shops and
               restaurants that you want to see.
             </p>
@@ -32,7 +32,7 @@ function ParkMap() {
               }}
               className="py-2 px-6 w-[216px] h-[50px] md:w-[232px] md:h-[55px] rounded-full inline-flex justify-between items-center space-x-2 hover:bg-opacity-90 transition-colors"
             >
-              <span className="text-[16px]">Book reservation now</span>
+              <span className="text-[16px] font-secondaryFont ">Open The Map</span>
               <ArrowRight className="w-6 h-6" />
             </Button>
           </div>

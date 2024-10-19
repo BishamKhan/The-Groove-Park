@@ -57,11 +57,11 @@ const LandingPage = () => {
               >
                 <div className="absolute inset-0 bg-black bg-opacity-50"></div>
                 <div className="relative z-10 flex flex-col  items-start text-left text-white px-20">
-                  <p>KHAWAJA YANNI</p>
-                  <h1 className="text-4xl md:text-6xl font-bold mt-4 mb-4">
+                  <p className="font-secondaryFont" >KHAWAJA YANNI</p>
+                  <h1 className="font-primaryFont text-4xl md:text-6xl mt-4 mb-4">
                     {slide.title}
                   </h1>
-                  <p className="text-lg md:text-md mb-8">{slide.subtitle}</p>
+                  <p className=" font-secondaryFont text-lg md:text-md mb-8">{slide.subtitle}</p>
                   <Button
                     style={{
                       border: "none",
@@ -72,7 +72,7 @@ const LandingPage = () => {
                     }}
                     className="py-2 px-6 w-[279px] h-[52px] md:w-[299px] md:h-[55px] rounded-full inline-flex justify-between items-center space-x-2 hover:bg-opacity-90 transition-colors"
                   >
-                    <span className="text-[16px]">Book reservation now</span>
+                    <span className="text-[16px] font-secondaryFont ">Book reservation now</span>
                     <ArrowRight className="w-6 h-6" />
                   </Button>
                 </div>

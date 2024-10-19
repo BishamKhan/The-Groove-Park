@@ -8,10 +8,10 @@ const About = () => {
   return (
     <div className="min-h-screen bg-[#1a2e0d] text-white p-4 sm:p-8 md:p-12 lg:p-16">
       <div className="max-w-4xl mx-auto space-y-8">
-        <h1 className="text-4xl md:text-5xl font-serif text-center">
+        <h1 className="text-4xl md:text-5xl font-primaryFont  text-center">
           Mall Of: Endless Possibilities
         </h1>
-        <p className="text-center text-sm md:text-base opacity-80 max-w-2xl mx-auto">
+        <p className="font-secondaryFont  text-center text-sm md:text-base opacity-80 max-w-2xl mx-auto">
           Lorem ipsum is simply dummy text of the printing and typesetting
           industry. Lorem ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -32,11 +32,11 @@ const About = () => {
         </div>
         <div className="bg-[#2a3e1d] rounded-lg p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-2">
-            <p className="text-sm font-semibold">25 SR/GUEST</p>
-            <h3 className="text-xl font-bold">
+            <p className="text-sm font-secondaryFont ">25 SR/GUEST</p>
+            <h3 className="text-2xl font-primaryFont ">
               Get your General Access Ticket
             </h3>
-            <p className="text-sm opacity-80 max-w-xl">
+            <p className="text-sm opacity-80 max-w-xl font-secondaryFont ">
               Lorem ipsum is simply dummy text of the printing and typesetting
               industry. Lorem ipsum has been the industry's standard dummy text
               e

@@ -9,6 +9,10 @@ const config: Config = {
   ],
   theme: {
   	extend: {
+		fontFamily:{
+			primaryFont: ['"Playfair Display"', 'serif'],
+        secondaryFont: ['Inter', 'sans-serif'],
+		},
   		colors: {
   			background: 'linear-gradient(97deg, rgba(40,54,6,1) 0%, rgba(15,21,0,1) 97%)',
   			foreground: 'hsl(var(--foreground))',

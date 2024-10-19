@@ -15,10 +15,10 @@ const Cuisine = () => {
   return (
     <div className="min-h-screen text-white p-4 sm:p-8 md:p-12 lg:p-16">
       <div className="max-w-4xl mx-auto space-y-8">
-        <p className="text-4xl md:text-5xl font-serif text-center text-[#fff] ">
+        <p className="text-4xl md:text-5xl font-primaryFont text-center text-[#fff] ">
           Experience The Finest Cuisine
         </p>
-        <p className="text-center text-sm md:text-base text-[#fff] ">
+        <p className="text-center text-sm md:text-base font-secondaryFont  text-[#fff] ">
           {" "}
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -37,7 +37,7 @@ const Cuisine = () => {
                   </div>
                   <div className="flex justify-between items-center p-2">
                     <div>
-                      <p className="text-[28px]">{item.name}</p>
+                      <p className="text-[26px] font-primaryFont ">{item.name}</p>
                       <Badge
                         style={{
                           border: "none",
@@ -45,7 +45,7 @@ const Cuisine = () => {
                           background:
                             "linear-gradient(180deg, rgba(173,135,73,1) 0%, rgba(220,187,117,1) 070%)",
                         }}
-                        className="p-1 pl-3 pr-3"
+                        className="font-secondaryFont font-light p-1 pl-3 pr-3"
                       >
                         {item.rate}
                       </Badge>
