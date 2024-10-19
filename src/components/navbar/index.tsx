@@ -155,7 +155,7 @@ export default function Navbar() {
               English
             </Button>
           </div>
-          <div>
+          <div className="ml-3" >
           <Button
             variant="outline"
             className="font-secondaryFont "
@@ -173,35 +173,6 @@ export default function Navbar() {
           </Button>
           </div>
           </div>
-          {/* lang and button */}
-          {/* <div className="py-4 " >
-          <div className="relative mb-3">
-            <Button variant="ghost" className="text-gold flex items-center">
-              <ChevronDown className="h-4 w-4" />
-              <Image
-                src="/assets/flag.png"
-                alt="England flag"
-                width={33}
-                height={22}
-                className="mr-2 "
-              />
-              English
-            </Button>
-          </div>
-          <Button
-            variant="outline"
-            style={{
-              border: "none",
-              borderRadius: "16px",
-              width: "142px",
-              height: "48px",
-              background:
-                "linear-gradient(180deg, rgba(173,135,73,1) 0%, rgba(220,187,117,1) 070%)",
-            }}
-          >
-            Log in
-          </Button>
-          </div> */}
           <div className="flex items-center justify-start space-x-6 ml-4 mb-6">
             <img src="/assets/tiktok.png" className="h-6 w-6" />
             <img src="/assets/insta.png" className="h-6 w-6" />

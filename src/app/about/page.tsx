@@ -26,9 +26,6 @@ const About = () => {
           <div className="absolute inset-0 flex items-center justify-center">
             <PlayCircle className="w-16 h-16 text-white opacity-80" />
           </div>
-          {/* <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-            <h2 className="text-3xl font-bold text-white drop-shadow-lg">The Groves</h2>
-          </div> */}
         </div>
         <div className="bg-[#2a3e1d] rounded-lg p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="space-y-2">

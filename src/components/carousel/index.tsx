@@ -5,9 +5,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
-
-import "./styles.css";
-
 import { Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
 
@@ -58,22 +55,22 @@ export default function Carousel() {
         >
           {carouselData.map((item, index) => (
             <>
-            <SwiperSlide
-              className="!w-[228px] !h-[362px] flex flex-col items-center rounded-lg !bg-transparent"
-              key={index}
-            >
-              <div className="w-full h-[100%] relative overflow-hidden rounded-lg">
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  layout="fill"
-                  objectFit="cover"
-                />
-              </div>
-              <h3 className="text-white font-primaryFont text-xl mt-2">
-                {item.title}
-              </h3>
-            </SwiperSlide>
+              <SwiperSlide
+                className="!w-[228px] !h-[362px] flex flex-col items-center rounded-lg !bg-transparent"
+                key={index}
+              >
+                <div className="w-full h-[100%] relative overflow-hidden rounded-lg">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    layout="fill"
+                    objectFit="cover"
+                  />
+                </div>
+                <h3 className="text-white font-primaryFont text-xl mt-2">
+                  {item.title}
+                </h3>
+              </SwiperSlide>
             </>
           ))}
         </Swiper>
