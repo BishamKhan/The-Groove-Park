@@ -15,8 +15,8 @@ const array = [
 
 const ParkAttractions = () => {
   return (
-    <div className="min-h-screen text-white p-4 sm:p-8 md:p-12 lg:p-16">
-      <div className="grid grid-cols-2">
+    <div className="min-h-screen text-white pl-4 sm:p-8 md:p-12 lg:px-16 lg:pl-36">
+      <div className="grid grid-cols-1 md:grid-cols-2">
         <p className="text-[32px] text-[#fff] font-primaryFont ">
           Book general access ticket and enjoy the attractions for free
         </p>

@@ -1,21 +1,14 @@
 "use client";
-import React, { useCallback, useEffect, useState } from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import { WheelGesturesPlugin } from "embla-carousel-wheel-gestures";
-import { Card, CardContent } from "@/components/ui/card";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import React from "react";
 
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 
 import "./styles.css";
 
-// import required modules
-import { Pagination, Navigation  } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
 import Image from "next/image";
 
 const carouselData = [
@@ -31,59 +24,60 @@ const carouselData = [
 
 export default function Carousel() {
   return (
-     <>
-    <div className="w-full py-12 px-4">
-      <Swiper
-        slidesPerView={4}
-        spaceBetween={20}
-        // pagination={{
-        //   clickable: true,
-        // }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper"
-        breakpoints={{
-          320: {
-            slidesPerView: 1, 
-            spaceBetween: 10,  
-          },
-        
-          480: {
-            slidesPerView: 1.5, 
-            spaceBetween: 15, 
-          },
-          640: {
-            slidesPerView: 2.5,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 3.5,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 4.5,
-            spaceBetween: 20,
-          },
-        }}
-      >
-        {carouselData.map((item, index) => (
-          <SwiperSlide key={index}>
-            <div className="w-full h-[526px] relative overflow-hidden rounded-lg">
-              <Image
-                src={item.image}
-                alt={item.title}
-                layout="fill"
-                objectFit="cover"
-                // className="transition-transform duration-300 ease-in-out hover:scale-110"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
-                <h3 className="text-white text-xl font-bold">{item.title}</h3>
+    <>
+      <div className="w-full py-12 px-4">
+        <Swiper
+          slidesPerView={4}
+          spaceBetween={20}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+
+            480: {
+              slidesPerView: 1.5,
+              spaceBetween: 15,
+            },
+            640: {
+              slidesPerView: 2.5,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 3.5,
+              spaceBetween: 10,
+            },
+            1024: {
+              slidesPerView: 4.5,
+              spaceBetween: 10,
+            },
+          }}
+        >
+          {carouselData.map((item, index) => (
+            <>
+            <SwiperSlide
+              className="!w-[228px] !h-[362px] flex flex-col items-center rounded-lg !bg-transparent"
+              key={index}
+            >
+              <div className="w-full h-[100%] relative overflow-hidden rounded-lg">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  layout="fill"
+                  objectFit="cover"
+                />
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+              <h3 className="text-white font-primaryFont text-xl mt-2">
+                {item.title}
+              </h3>
+            </SwiperSlide>
+            </>
+          ))}
+        </Swiper>
+      </div>
     </>
   );
 }
