@@ -30,7 +30,8 @@ const Cuisine = () => {
         <Grid container spacing={2} sx={{ mt: 5 }}>
           {array.map((item) => (
             <Grid size={{ xs: 12, md: 6 }}>
-              <Card className="rounded-[22px] pt-2 pb-5 px-3 border-none text-[#fff] bg-[#fff]/[0.20] ">
+              <Card className="rounded-[22px] pt-2 pb-5 px-3 border-none text-[#fff] bg-[#fff]/[0.20] transition-shadow duration-300 hover:shadow-[0_4px_15px_rgba(255,255,255,0.15)]">
+
                 <CardContent>
                   <div>
                     <img src={item.img} />
@@ -45,13 +46,13 @@ const Cuisine = () => {
                           background:
                             "linear-gradient(180deg, rgba(173,135,73,1) 0%, rgba(220,187,117,1) 070%)",
                         }}
-                        className="font-secondaryFont font-light p-1 pl-3 pr-3"
+                        className="font-secondaryFont cursor-pointer font-light p-1 pl-3 pr-3"
                       >
                         {item.rate}
                       </Badge>
                     </div>
                     <div>
-                      <ArrowRightIcon />
+                      <ArrowRightIcon className="cursor-pointer"  />
                     </div>
                   </div>
                 </CardContent>
