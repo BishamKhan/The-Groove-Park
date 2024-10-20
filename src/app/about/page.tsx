@@ -38,7 +38,7 @@ const About = () => {
                 cursor: "pointer",
               }}
             >
-              <PlayIcon className="text-gradient-to-r from-[#283606] to-[#0f1500]" />
+              <PlayIcon fill="gradient-to-r from-[#283606] to-[#0f1500]" className="text-gradient-to-r from-[#283606] to-[#0f1500]" />
             </div>
           </div>
         </div>

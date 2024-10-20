@@ -5,7 +5,7 @@ import React from "react";
 
 const Experience = () => {
   return (
-    <div className="min-h-screen text-white p-4 md:pl-40 flex flex-col md:flex-row items-center justify-center">
+    <div className="max-h-screen text-white p-4 md:pl-40 flex flex-col md:flex-row items-center justify-center">
     <div className="w-full md:w-[30%] mb-4 md:mb-0 text-left">
       <h1 className="text-3xl md:text-5xl font-primaryFont mb-4">
         Curate your experience as you like
@@ -25,7 +25,7 @@ const Experience = () => {
       </Button>
     </div>
 
-    <div className="w-full md:w-[70%] mt-4 md:mt-0">
+    <div className=" w-full md:w-[70%] mt-4 md:mt-0">
       <Carousel />
     </div>
   </div>

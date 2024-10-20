@@ -15,14 +15,14 @@ const array = [
 
 const ParkAttractions = () => {
   return (
-    <div className="min-h-screen text-white pl-4 sm:p-8 md:p-12 lg:px-16 lg:pl-36">
+    <div className="max-h-screen  text-white pl-4 sm:p-8 md:p-12 lg:px-16 lg:pl-36">
       <div className="grid grid-cols-1 md:grid-cols-2">
         <p className="text-[32px] text-[#fff] font-primaryFont ">
           Book general access ticket and enjoy the attractions for free
         </p>
       </div>
 
-      <div className="grid grid-cols-2 mt-4">
+      <div className="gridgrid-cols-2 mt-4">
         <Button
           style={{
             border: "none",
@@ -41,7 +41,7 @@ const ParkAttractions = () => {
       </div>
 
       {/* carousel */}
-      <div>
+      <div className="">
         <Carousel />
       </div>
     </div>
