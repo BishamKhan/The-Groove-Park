@@ -6,7 +6,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="min-h-screen  text-white p-4 sm:p-8 md:p-12 lg:p-16">
+    <div className="min-h-screen  text-white p-4 mt-5 md:mt-0 sm:p-8 md:p-12 lg:p-16">
       <div className="max-w-4xl mx-auto space-y-8">
         <h1 className="text-4xl md:text-5xl font-primaryFont  text-center">
           Mall Of: Endless Possibilities
